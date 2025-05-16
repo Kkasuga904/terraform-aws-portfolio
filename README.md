@@ -38,3 +38,6 @@
 ├── tf_graph.dot / .png
 ├── terraform.tfvars
 └── README.md
+
+![Architecture](./architecture.png)
+> ※ `architecture.png` は現在作成中です
