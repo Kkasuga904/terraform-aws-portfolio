@@ -1,0 +1,23 @@
+digraph {
+	compound = "true"
+	newrank = "true"
+	subgraph "root" {
+		"[root] aws_iam_policy.s3_read_only_policy (expand)" [label = "aws_iam_policy.s3_read_only_policy", shape = "box"]
+		"[root] aws_iam_role.my_role (expand)" [label = "aws_iam_role.my_role", shape = "box"]
+		"[root] aws_iam_role_policy_attachment.s3_read_only_attachment (expand)" [label = "aws_iam_role_policy_attachment.s3_read_only_attachment", shape = "box"]
+		"[root] aws_s3_bucket.my_bucket (expand)" [label = "aws_s3_bucket.my_bucket", shape = "box"]
+		"[root] local_file.example (expand)" [label = "local_file.example", shape = "box"]
+		"[root] provider[\"registry.terraform.io/hashicorp/aws\"]" [label = "provider[\"registry.terraform.io/hashicorp/aws\"]", shape = "diamond"]
+		"[root] provider[\"registry.terraform.io/hashicorp/local\"]" [label = "provider[\"registry.terraform.io/hashicorp/local\"]", shape = "diamond"]
+		"[root] aws_iam_policy.s3_read_only_policy (expand)" -> "[root] aws_s3_bucket.my_bucket (expand)"
+		"[root] aws_iam_role.my_role (expand)" -> "[root] provider[\"registry.terraform.io/hashicorp/aws\"]"
+		"[root] aws_iam_role_policy_attachment.s3_read_only_attachment (expand)" -> "[root] aws_iam_policy.s3_read_only_policy (expand)"
+		"[root] aws_iam_role_policy_attachment.s3_read_only_attachment (expand)" -> "[root] aws_iam_role.my_role (expand)"
+		"[root] aws_s3_bucket.my_bucket (expand)" -> "[root] provider[\"registry.terraform.io/hashicorp/aws\"]"
+		"[root] local_file.example (expand)" -> "[root] provider[\"registry.terraform.io/hashicorp/local\"]"
+		"[root] provider[\"registry.terraform.io/hashicorp/aws\"] (close)" -> "[root] aws_iam_role_policy_attachment.s3_read_only_attachment (expand)"
+		"[root] provider[\"registry.terraform.io/hashicorp/local\"] (close)" -> "[root] local_file.example (expand)"
+		"[root] root" -> "[root] provider[\"registry.terraform.io/hashicorp/aws\"] (close)"
+		"[root] root" -> "[root] provider[\"registry.terraform.io/hashicorp/local\"] (close)"
+	}
+}
