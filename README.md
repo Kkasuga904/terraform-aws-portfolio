@@ -90,7 +90,7 @@ dot -Tpng tf_graph.dot -o tf_graph.png
 
 この構成の詳細な背景や工夫点については、以下の記事にまとめています。
 
-📖 [クラウドエンジニアです - Qiita](https://qiita.com/over9131120/items/xxxxxxxxxxxxxx)
+📖 [Terraform × AWS インフラ構成のポートフォリオ構築記録 - Qiita](https://qiita.com/over9131120/items/e405e0d4e39baadc42ce)
 
 
 
