@@ -41,3 +41,26 @@
 
 ![Architecture](./architecture.png)
 > ※ `architecture.png` は現在作成中です
+
+## 🧭 構築手順（ローカル）
+
+```bash
+# 1. 初期化（プロバイダなどダウンロード）
+terraform init
+
+# 2. 構成内容の確認
+terraform plan
+
+# 3. 本番構築（AWSへ反映）
+terraform apply
+
+# 4. 構成図出力（任意）
+terraform graph > tf_graph.dot
+dot -Tpng tf_graph.dot -o tf_graph.png
+
+## 💡 学び・工夫・今後の展望
+
+- `.terraform` や `.exe` ファイルがGitHubに上がってしまい、LFSの制限でアップロードに苦戦。`.gitignore`設定と再構築で対応。
+- `depends_on` を用いた依存関係管理、リソース作成順の明示に挑戦。
+- `lifecycle` を用いて再作成を抑制するなど、本番想定のIaC設計を意識。
+- 今後はALB・AutoScaling・CloudFrontの導入も視野に構成を拡張予定。
