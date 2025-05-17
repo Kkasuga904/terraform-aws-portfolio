@@ -1,3 +1,6 @@
+> 📌 Looking for AWS Infrastructure Support?  
+> 👉 [Coconala: Custom Terraform-based AWS Infrastructure Setup](https://coconala.com/services/3709841)
+
 # 🌍 Terraform × AWS Infrastructure Portfolio
 
 こんにちは、クラウドエンジニア志望の **室木 海里（Kairi Muroki）** です。  
@@ -38,7 +41,8 @@
 ├── tf_graph.dot / .png
 ├── terraform.tfvars
 └── README.md
-
+# 📊 Architecture Diagram
+Below is a visual representation of the infrastructure structure managed via Terraform:
 ![Architecture](./architecture.png)
 ## 🛒 ココナラ出品ページ（副業）
 
@@ -89,20 +93,22 @@ dot -Tpng tf_graph.dot -o tf_graph.png
 
 ## 🌍 English Summary (for global visitors)
 
-This is a personal infrastructure portfolio built with Terraform and AWS.  
-It showcases modular design, state management, IAM access control, and monitoring via CloudWatch.  
-All resources are defined as code, suitable for scalable and secure cloud environments.
+This is a portfolio of AWS infrastructure built entirely with Terraform (v1.7+).  
+It showcases:
 
-Key Technologies:
-- Terraform 1.7+
-- AWS EC2, RDS, S3, IAM, CloudWatch
-- Lifecycle, depends_on, import
+- Modular architecture (EC2, RDS, S3, IAM, CloudWatch)
+- State and lifecycle management
+- Security-aware IAM policies
+- Monitoring integration via CloudWatch
+- GitHub-hosted and reproducible setup
 
-
-
-
+💡 Feel free to reach out for freelance opportunities or infrastructure support.
 
 
+## 📫 Contact
+
+For job offers, freelance inquiries, or questions:  
+Please reach out via [Coconala](https://coconala.com/services/3709841) or LinkedIn.
 
 
 
