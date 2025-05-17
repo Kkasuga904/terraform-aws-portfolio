@@ -1,6 +1,6 @@
 
 output "s3_bucket_name_output" {
- value = module.units.s3_bucket_name_output
+ value = module.s3_bucket.bucket_name
  description = "作成したS3パケットの名前"
 }
 
