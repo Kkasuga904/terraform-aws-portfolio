@@ -40,8 +40,12 @@
 └── README.md
 
 ![Architecture](./architecture.png)
-> ※ `architecture.png` は現在作成中です
+## 🛒 ココナラ出品ページ（副業）
 
+Terraform構成をベースにしたAWS構築代行も対応しています。  
+レビュー獲得のため、初回は無料相談可能です。
+
+🔗 [ココナラ出品ページはこちら](https://coconala.com/services/3709841)
 ## 🧭 構築手順（ローカル）
 
 ```bash
