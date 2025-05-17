@@ -1,7 +1,7 @@
 
 
 output "s3_bucket_name_output" {
- value = module.root.root_s3_bucket_name
+ value = var.s3_bucket_name
  description = "作成したS3パケットの名前"
 }
 
