@@ -75,23 +75,24 @@ dot -Tpng tf_graph.dot -o tf_graph.png
 | `iam` | 各サービスのIAMロールを個別に定義し、最小権限を意識。 |
 
 
-## 📦 モジュール構成と役割
-
-| モジュール | 内容 |
-|------------|------|
-| `ec2` | Webサーバ（Ubuntu）を起動。`user_data`で自動初期化。 |
-| `rds` | RDS (MySQL) のパブリック接続を無効化し、セキュアに構成。 |
-| `s3` | 静的Webホスティング用。lifecycleルールで自動削除。 |
-| `iam` | 各サービスのIAMロールを個別に定義し、最小権限を意識。 |
-
----
-
 ## ✍️ 解説記事（Qiita）
 
 この構成の詳細な背景や工夫点については、以下の記事にまとめています。
 
 📖 [Terraform × AWS インフラ構成のポートフォリオ構築記録 - Qiita](https://qiita.com/over9131120/items/e405e0d4e39baadc42ce)
 
+---
+
+## 🌍 English Summary (for global visitors)
+
+This is a personal infrastructure portfolio built with Terraform and AWS.  
+It showcases modular design, state management, IAM access control, and monitoring via CloudWatch.  
+All resources are defined as code, suitable for scalable and secure cloud environments.
+
+Key Technologies:
+- Terraform 1.7+
+- AWS EC2, RDS, S3, IAM, CloudWatch
+- Lifecycle, depends_on, import
 
 
 
