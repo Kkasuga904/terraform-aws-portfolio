@@ -93,6 +93,7 @@ dot -Tpng tf_graph.dot -o tf_graph.png
 
 ## 🌍 English Summary (for global visitors)
 
+This project provisions AWS infrastructure using Terraform, including EC2, S3, RDS, and CloudWatch.
 This is a portfolio of AWS infrastructure built entirely with Terraform (v1.7+).  
 It showcases:
 
