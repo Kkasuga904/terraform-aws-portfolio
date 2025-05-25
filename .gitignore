@@ -1,8 +1,21 @@
+
+# Terraform directories and files
 .terraform/
-*.tfstate
-*.tfstate.*
-*.backup
-*.exe
-*.zip
-*.log
+.terraform.lock.hcl
+terraform.tfstate
+terraform.tfstate.*
+
+# Sensitive files
+*.tfvars
+*.tfvars.json
 *.pem
+
+# Backup & log files
+*.backup
+*.log
+
+# Local/OS-specific files
+*.zip
+*.exe
+*.DS_Store
+Thumbs.db
