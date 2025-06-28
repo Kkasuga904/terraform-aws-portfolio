@@ -1,3 +1,7 @@
+provider "aws" {
+  region = "ap-northeast-1" # 東京リージョン、必要に応じて変更
+}
+
 module "ec2_instances" {
   source = "./modules/ec2"
   instances = var.ec2_instances
@@ -28,6 +32,9 @@ module "units" {
 
 module "security_group" {
   source = "./modules/security_group"
+
+  vpc_id       = module.network.vpc_id
+  common_tags  = var.common_tags
 }
 
 module "cloudwatch" {
@@ -40,10 +47,10 @@ module "cloudwatch" {
 }
 
 module "alb" {
-  source = "./modules/alb"
-
-  subnet_ids       = module.network.public_subnet_ids
-  alb_sg_id        = module.security_group.alb_sg_id
-  vpc_id           = module.network.vpc_id
-  ec2_instance_id  = module.ec2.instance_id
+  source          = "./modules/alb"
+  subnet_ids      = module.network.public_subnet_ids
+  alb_sg_id       = module.security_group.alb_sg_id
+  vpc_id          = module.network.vpc_id
+  ec2_instance_id = module.ec2_instances.instance_ids[0]
 }
+
