@@ -7,7 +7,7 @@ resource "aws_instance" "this" {
   key_name = each.value.key_name
   tags = merge(var.common_tags, each.value.tags, { Name = each.key })
   monitoring = var.enable_monitoring
-  user_data = file("../New folder/userdata.sh") # 必要に応じてパスを修正
+  user_data = file("${path.module}/userdata.sh")
 
 lifecycle {
   create_before_destroy = true
