@@ -1,0 +1,11 @@
+aws_region     = "ap-northeast-1"
+s3_bucket_name = "replace-with-a-globally-unique-bucket-name"
+
+common_tags = {
+  Environment = "dev"
+  Project     = "terraform-example"
+  Owner       = "your-name"
+}
+
+enable_monitoring   = false
+deployer_public_key = "ssh-ed25519 replace-with-your-public-key"

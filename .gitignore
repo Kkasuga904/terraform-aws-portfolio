@@ -8,6 +8,7 @@ terraform.tfstate.*
 # Sensitive files
 *.tfvars
 *.tfvars.json
+!terraform.tfvars.example
 *.pem
 
 # Backup & log files
